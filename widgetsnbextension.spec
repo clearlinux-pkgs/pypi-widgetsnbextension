@@ -4,7 +4,7 @@
 #
 Name     : widgetsnbextension
 Version  : 3.0.2
-Release  : 8
+Release  : 9
 URL      : https://pypi.debian.net/widgetsnbextension/widgetsnbextension-3.0.2.tar.gz
 Source0  : https://pypi.debian.net/widgetsnbextension/widgetsnbextension-3.0.2.tar.gz
 Summary  : IPython HTML widgets for Jupyter
@@ -48,7 +48,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505098072
+export SOURCE_DATE_EPOCH=1505368139
 python3 setup.py build -b py3
 
 %install
