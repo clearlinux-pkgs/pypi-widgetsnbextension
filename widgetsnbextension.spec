@@ -4,7 +4,7 @@
 #
 Name     : widgetsnbextension
 Version  : 3.0.3
-Release  : 11
+Release  : 12
 URL      : https://pypi.debian.net/widgetsnbextension/widgetsnbextension-3.0.3.tar.gz
 Source0  : https://pypi.debian.net/widgetsnbextension/widgetsnbextension-3.0.3.tar.gz
 Summary  : IPython HTML widgets for Jupyter
