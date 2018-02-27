@@ -4,13 +4,12 @@
 #
 Name     : widgetsnbextension
 Version  : 3.1.4
-Release  : 20
+Release  : 21
 URL      : https://pypi.python.org/packages/41/15/6f21b156e8c3b4edfc0c57d8ad840e0b3c48a4add796c6ad3de90aa8cc5d/widgetsnbextension-3.1.4.tar.gz
 Source0  : https://pypi.python.org/packages/41/15/6f21b156e8c3b4edfc0c57d8ad840e0b3c48a4add796c6ad3de90aa8cc5d/widgetsnbextension-3.1.4.tar.gz
 Summary  : IPython HTML widgets for Jupyter
 Group    : Development/Tools
 License  : BSD-3-Clause
-Requires: widgetsnbextension-config
 Requires: widgetsnbextension-python3
 Requires: widgetsnbextension-data
 Requires: widgetsnbextension-python
@@ -22,17 +21,10 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
+Patch1: change-widgetsnbextension-json-path.patch
 
 %description
 No detailed description available
-
-%package config
-Summary: config components for the widgetsnbextension package.
-Group: Default
-
-%description config
-config components for the widgetsnbextension package.
-
 
 %package data
 Summary: data components for the widgetsnbextension package.
@@ -62,13 +54,14 @@ python3 components for the widgetsnbextension package.
 
 %prep
 %setup -q -n widgetsnbextension-3.1.4
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1518790532
+export SOURCE_DATE_EPOCH=1519756309
 python3 setup.py build -b py3
 
 %install
@@ -81,14 +74,11 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files config
-%defattr(-,root,root,-)
-%config /usr/etc/jupyter/nbconfig/notebook.d/widgetsnbextension.json
-
 %files data
 %defattr(-,root,root,-)
 /usr/share/jupyter/nbextensions/jupyter-js-widgets/extension.js
 /usr/share/jupyter/nbextensions/jupyter-js-widgets/extension.js.map
+/usr/share/jupyter/nbextensions/nbconfig/notebook.d/widgetsnbextension.json
 
 %files python
 %defattr(-,root,root,-)
