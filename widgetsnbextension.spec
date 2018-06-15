@@ -4,7 +4,7 @@
 #
 Name     : widgetsnbextension
 Version  : 3.2.1
-Release  : 27
+Release  : 28
 URL      : https://pypi.python.org/packages/da/c4/53da2ddb67be3610e985f9b1ffa8cce45cef2ef3b8d2cd42009235394a65/widgetsnbextension-3.2.1.tar.gz
 Source0  : https://pypi.python.org/packages/da/c4/53da2ddb67be3610e985f9b1ffa8cce45cef2ef3b8d2cd42009235394a65/widgetsnbextension-3.2.1.tar.gz
 Summary  : IPython HTML widgets for Jupyter
@@ -16,7 +16,6 @@ Requires: widgetsnbextension-python
 Requires: notebook
 BuildRequires : pbr
 BuildRequires : pip
-
 BuildRequires : python3-dev
 BuildRequires : setuptools
 Patch1: change-widgetsnbextension-json-path.patch
@@ -59,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528564694
+export SOURCE_DATE_EPOCH=1529094264
 python3 setup.py build -b py3
 
 %install
