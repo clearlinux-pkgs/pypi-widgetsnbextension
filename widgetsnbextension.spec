@@ -16,7 +16,7 @@ Requires: widgetsnbextension-python
 Requires: notebook
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 Patch1: change-widgetsnbextension-json-path.patch
