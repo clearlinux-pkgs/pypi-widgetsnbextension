@@ -4,7 +4,7 @@
 #
 Name     : widgetsnbextension
 Version  : 3.5.1
-Release  : 45
+Release  : 46
 URL      : https://files.pythonhosted.org/packages/e0/c4/b7211bfc8e998fe55764539d2b169fb200e6427dfe4e62d1d83013caa9ef/widgetsnbextension-3.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e0/c4/b7211bfc8e998fe55764539d2b169fb200e6427dfe4e62d1d83013caa9ef/widgetsnbextension-3.5.1.tar.gz
 Summary  : IPython HTML widgets for Jupyter
@@ -20,7 +20,25 @@ BuildRequires : notebook
 Patch1: change-widgetsnbextension-json-path.patch
 
 %description
-No detailed description available
+.. image:: https://img.shields.io/pypi/v/widgetsnbextension.svg
+   :target: https://pypi.python.org/pypi/widgetsnbextension/
+   :alt: Version Number
+
+.. image:: https://img.shields.io/pypi/dm/widgetsnbextension.svg
+   :target: https://pypi.python.org/pypi/widgetsnbextension/
+   :alt: Number of PyPI downloads
+
+Interactive HTML Widgets
+========================
+
+Interactive HTML widgets for Jupyter notebooks.
+
+Usage
+=====
+
+Install the corresponding package for your kernel.  i.e. Python users would also
+install `ipywidgets`.  Refer to that package's documentation for usage
+instructions.
 
 %package data
 Summary: data components for the widgetsnbextension package.
@@ -51,6 +69,7 @@ python components for the widgetsnbextension package.
 Summary: python3 components for the widgetsnbextension package.
 Group: Default
 Requires: python3-core
+Provides: pypi(widgetsnbextension)
 
 %description python3
 python3 components for the widgetsnbextension package.
@@ -58,6 +77,7 @@ python3 components for the widgetsnbextension package.
 
 %prep
 %setup -q -n widgetsnbextension-3.5.1
+cd %{_builddir}/widgetsnbextension-3.5.1
 %patch1 -p1
 
 %build
@@ -65,7 +85,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564519220
+export SOURCE_DATE_EPOCH=1582902602
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -81,7 +102,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/widgetsnbextension
-cp LICENSE %{buildroot}/usr/share/package-licenses/widgetsnbextension/LICENSE
+cp %{_builddir}/widgetsnbextension-3.5.1/LICENSE %{buildroot}/usr/share/package-licenses/widgetsnbextension/5dc7e0ef3878c3d4a92a7233208e6f91553de266
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -98,7 +119,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/widgetsnbextension/LICENSE
+/usr/share/package-licenses/widgetsnbextension/5dc7e0ef3878c3d4a92a7233208e6f91553de266
 
 %files python
 %defattr(-,root,root,-)
