@@ -4,7 +4,7 @@
 #
 Name     : widgetsnbextension
 Version  : 3.5.1
-Release  : 48
+Release  : 49
 URL      : https://files.pythonhosted.org/packages/e0/c4/b7211bfc8e998fe55764539d2b169fb200e6427dfe4e62d1d83013caa9ef/widgetsnbextension-3.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e0/c4/b7211bfc8e998fe55764539d2b169fb200e6427dfe4e62d1d83013caa9ef/widgetsnbextension-3.5.1.tar.gz
 Summary  : IPython HTML widgets for Jupyter
@@ -20,25 +20,7 @@ BuildRequires : notebook
 Patch1: change-widgetsnbextension-json-path.patch
 
 %description
-.. image:: https://img.shields.io/pypi/v/widgetsnbextension.svg
-   :target: https://pypi.python.org/pypi/widgetsnbextension/
-   :alt: Version Number
-
-.. image:: https://img.shields.io/pypi/dm/widgetsnbextension.svg
-   :target: https://pypi.python.org/pypi/widgetsnbextension/
-   :alt: Number of PyPI downloads
-
-Interactive HTML Widgets
-========================
-
-Interactive HTML widgets for Jupyter notebooks.
-
-Usage
-=====
-
-Install the corresponding package for your kernel.  i.e. Python users would also
-install `ipywidgets`.  Refer to that package's documentation for usage
-instructions.
+No detailed description available
 
 %package data
 Summary: data components for the widgetsnbextension package.
@@ -70,6 +52,7 @@ Summary: python3 components for the widgetsnbextension package.
 Group: Default
 Requires: python3-core
 Provides: pypi(widgetsnbextension)
+Requires: pypi(notebook)
 
 %description python3
 python3 components for the widgetsnbextension package.
@@ -85,15 +68,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582902602
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603408089
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
