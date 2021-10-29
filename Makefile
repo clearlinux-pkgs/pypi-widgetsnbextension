@@ -1,5 +1,5 @@
 PKG_NAME := widgetsnbextension
-URL = https://files.pythonhosted.org/packages/e0/c4/b7211bfc8e998fe55764539d2b169fb200e6427dfe4e62d1d83013caa9ef/widgetsnbextension-3.5.1.tar.gz
+URL = https://files.pythonhosted.org/packages/94/52/00371a0962259945685b3d78e1a8ad81698b1699bbea6cba6ec09c3c9b44/widgetsnbextension-3.5.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
