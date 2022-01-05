@@ -4,7 +4,7 @@
 #
 Name     : widgetsnbextension
 Version  : 3.5.2
-Release  : 62
+Release  : 63
 URL      : https://files.pythonhosted.org/packages/94/52/00371a0962259945685b3d78e1a8ad81698b1699bbea6cba6ec09c3c9b44/widgetsnbextension-3.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/94/52/00371a0962259945685b3d78e1a8ad81698b1699bbea6cba6ec09c3c9b44/widgetsnbextension-3.5.2.tar.gz
 Summary  : IPython HTML widgets for Jupyter
@@ -14,9 +14,8 @@ Requires: widgetsnbextension-data = %{version}-%{release}
 Requires: widgetsnbextension-license = %{version}-%{release}
 Requires: widgetsnbextension-python = %{version}-%{release}
 Requires: widgetsnbextension-python3 = %{version}-%{release}
-Requires: notebook
 BuildRequires : buildreq-distutils3
-BuildRequires : notebook
+BuildRequires : pypi(notebook)
 Patch1: change-widgetsnbextension-json-path.patch
 
 %description
@@ -68,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635468410
+export SOURCE_DATE_EPOCH=1641418780
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
