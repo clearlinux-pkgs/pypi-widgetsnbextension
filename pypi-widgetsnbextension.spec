@@ -4,7 +4,7 @@
 #
 Name     : pypi-widgetsnbextension
 Version  : 3.6.1
-Release  : 71
+Release  : 72
 URL      : https://files.pythonhosted.org/packages/3c/9c/a6ddc7ef107a0fa96ba8acb3b272293a517c929a9f61536434706bb38942/widgetsnbextension-3.6.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3c/9c/a6ddc7ef107a0fa96ba8acb3b272293a517c929a9f61536434706bb38942/widgetsnbextension-3.6.1.tar.gz
 Summary  : IPython HTML widgets for Jupyter
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1655939201
+export SOURCE_DATE_EPOCH=1656361552
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
