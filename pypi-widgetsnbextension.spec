@@ -4,7 +4,7 @@
 #
 Name     : pypi-widgetsnbextension
 Version  : 4.0.5
-Release  : 82
+Release  : 83
 URL      : https://files.pythonhosted.org/packages/46/d0/ef509e5b74d96821b4ec170b7785449e25a89ef0e781e80562e515f84678/widgetsnbextension-4.0.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/46/d0/ef509e5b74d96821b4ec170b7785449e25a89ef0e781e80562e515f84678/widgetsnbextension-4.0.5.tar.gz
 Summary  : Jupyter interactive widgets for Jupyter Notebook
