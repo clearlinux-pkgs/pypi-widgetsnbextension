@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-widgetsnbextension
-Version  : 4.0.8
-Release  : 86
-URL      : https://files.pythonhosted.org/packages/7e/2d/94bd231949a19e0bc291361d965bade2db511890e65c2f360ddc61a06e4b/widgetsnbextension-4.0.8.tar.gz
-Source0  : https://files.pythonhosted.org/packages/7e/2d/94bd231949a19e0bc291361d965bade2db511890e65c2f360ddc61a06e4b/widgetsnbextension-4.0.8.tar.gz
+Version  : 4.0.9
+Release  : 87
+URL      : https://files.pythonhosted.org/packages/a1/e4/684abbfeb7a7a2e6a17aa8a5815e954a069edc0f567d912d2d3ffee800a9/widgetsnbextension-4.0.9.tar.gz
+Source0  : https://files.pythonhosted.org/packages/a1/e4/684abbfeb7a7a2e6a17aa8a5815e954a069edc0f567d912d2d3ffee800a9/widgetsnbextension-4.0.9.tar.gz
 Summary  : Jupyter interactive widgets for Jupyter Notebook
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -62,11 +62,11 @@ python3 components for the pypi-widgetsnbextension package.
 
 
 %prep
-%setup -q -n widgetsnbextension-4.0.8
-cd %{_builddir}/widgetsnbextension-4.0.8
+%setup -q -n widgetsnbextension-4.0.9
+cd %{_builddir}/widgetsnbextension-4.0.9
 %patch -P 1 -p1
 pushd ..
-cp -a widgetsnbextension-4.0.8 buildavx2
+cp -a widgetsnbextension-4.0.9 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689694985
+export SOURCE_DATE_EPOCH=1694623131
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
